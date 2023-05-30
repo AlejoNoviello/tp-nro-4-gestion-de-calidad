@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $numero1 = ($numero % 10 + 7) % 10;
         $numero2 = (($numero / 10) % 10 + 7) % 10;
         $numero3 = (($numero / 100) % 10 + 7) % 10;
-        $numero4 = (($numero / 1000) + 7) % 10;
+        $numero4 = (($numero / 1000) % 10 + 7) % 10;
 
-        $numero_encriptado = $numero3 * 1000 + $numero4 * 100 + $numero1 * 10 + $numero2;
+        $numero_encriptado = $numero2 * 1000 + $numero1 * 100 + $numero4 * 10 + $numero3;
     }
 }
 
